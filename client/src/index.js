@@ -1,14 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { theme } from './utils';
+import { Provider } from 'react-redux';
+import 'react-toastify/dist/ReactToastify.css';
+import store from './app/store';
+import { ToastContainer } from 'react-toastify';
+import { GlobalStyles } from '@mui/material';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+const inputGlobalStyles = (
+  <GlobalStyles
+    styles={{
+      '.Toastify__toast-container--top-right': {
+        top: '4em',
+      },
+    }}
+  />
+);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+      <ToastContainer />
+      {inputGlobalStyles}
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

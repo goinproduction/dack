@@ -1,0 +1,2 @@
+export const FETCH_PROVINCE = 'FETCH_PROVINCE';
+export const FETCH_DISTRICT = 'FETCH_DISTRICT';

@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Mini ECommerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Table of Contents**
 
-## Available Scripts
+1. [Resource](#resouce)
+2. [Tổ chức folder](#to-chuc-folder)
+3. [How to contribute](#how-to-contribute)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## I. Resource
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Figma](https://www.figma.com/file/zd8VPeNsj75ROTp89SCGED/React-Ecommerce?node-id=0%3A1)
+2. [Prototype](https://www.figma.com/proto/zd8VPeNsj75ROTp89SCGED/React-Ecommerce?page-id=0%3A1&node-id=3%3A2&viewport=392%2C48%2C0.11&scaling=scale-down&starting-point-node-id=3%3A2)
+3. [Trello](https://trello.com/invite/b/nzG8sKtI/430981746e70ff3be99abd3ad04e78aa/ecommerce-vinova-intern-11-2021)
+4. [Backend API Document](https://gitlab.com/vinova/vinova-intern-11-2021/web-final-project/web-final-project-backend/-/blob/develop/README.md)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## II. Tổ chức folder
 
-### `npm test`
+```
+src
+|__ api (axiosClient, userApi, productApi,...)
+|__ app (redux store, rootSaga)
+|__ assets (images)
+|__ constants (reusable variables)
+|__ utils (reusable functions)
+|__ components (shared components)
+|__ features (Auth, Product, Cart, MyAccount)
+|__ App.js
+|__ index.js
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Feature Auth
 
-### `npm run build`
+```
+Auth
+|__ components
+|   |__ LoginForm
+|   |__ RegisterForm
+|
+|__ pages
+|   |__ Login
+|   |__ Register
+|
+|__ userSlice.js
+|__ index.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Feature Product
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+Product
+|__ components
+|  |__ ProductList
+|  |__ Product
+|  |__ ...
+|
+|__ pages
+|  |__ DetailPage
+|  |__ ListPage
+|
+|__ productSlice.js
+|__ index.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## III. How to contribute
 
-### `npm run eject`
+### 1. Clone
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://gitlab.com/vinova/vinova-intern-11-2021/web-final-project/web-final-project-frontend.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. NPM Install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+cd web-final-project-frontend
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Run Project
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Checkout a new branch
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git checkout -b [brandname]
+```
 
-### Code Splitting
+### 5. Conventional Commits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `feat:` thêm một feature
+- `fix`: fix bug cho hệ thống, vá lỗi trong codebase
+- `refactor`: sửa code nhưng không fix bug cũng không thêm feature hoặc đôi khi bug cũng được fix từ việc refactor.
+- `docs`: thêm/thay đổi document
+- `chore`: những sửa đổi nhỏ nhặt không liên quan tới code
+- `style`: những thay đổi không làm thay đổi ý nghĩa của code như thay đổi css/ui chẳng hạn.
+- `perf`: code cải tiến về mặt hiệu năng xử lý
+- `vendor`: cập nhật version cho các dependencies, packages.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+git commit -m "[feat] -những công việc làm"
+```

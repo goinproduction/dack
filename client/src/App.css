@@ -1,6 +1,4 @@
-
-
-.inputArea{
+.inputArea {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -14,78 +12,77 @@
   -webkit-appearance: none;
   appearance: none;
   border-radius: 0.25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.text-validate{
+.text-validate {
   color: orangered !important;
 }
 
-.rule-text{
-  
+.rule-text {
 }
 
-.auth-title{
+.auth-title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 /* .auth{
-  background-image: url('./assets/img/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-} */
+    background-image: url('./assets/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  } */
 
-.form{
+.form {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.form-update{
+.form-update {
   display: flex;
 }
 
-.form-left{
+.form-left {
   width: 100% !important;
   padding-right: 30px;
 }
 
-.form-right{
+.form-right {
   width: 100% !important;
   padding-left: 30px;
 }
 
-.detail{
+.detail {
   margin-top: 30px;
   margin-bottom: 0;
   font-weight: bold;
   font-size: 19.2px;
 }
 
-.title{
+.title {
   text-align: center;
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.back-icon{
+.back-icon {
   cursor: pointer;
   width: 55px;
   height: 55px;
 }
 
-.link{
+.link {
   color: black !important;
   transition: all 0.5s;
   display: inline-block;
   position: relative;
 }
 
-.link:after{
+.link:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -98,39 +95,39 @@
   transition: transform 0.25s ease-out;
 }
 
-.link:hover::after{
+.link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
   height: 3px;
 }
 
-.feature{
+.feature {
   display: flex;
   margin: 20px 0 50px;
   max-width: 500px;
 }
 
-.feature-item{
+.feature-item {
   margin-right: 10px !important;
 }
 
-.search{
+.search {
   max-width: 500px;
 }
 
-.rules{
+.rules {
   display: flex;
 }
 
-.rule-right{
+.rule-right {
   margin-top: -5px !important;
   padding-left: 10px;
 }
 
-.disable-input{
-  pointer-events:none;
+.disable-input {
+  pointer-events: none;
 }
 
-.img-preview{
+.img-preview {
   max-width: 700px;
 }
