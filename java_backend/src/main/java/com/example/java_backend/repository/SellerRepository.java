@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.example.java_backend.models.Seller;
 
 @Repository
-public interface SellerRepository extends JpaRepository<Seller,Long>{
-	Optional<Seller> findBySellerId(Long sellerId);
+public interface SellerRepository extends JpaRepository<Seller,String>{
+	Optional<Seller> findBySellerId(String sellerId);
 }

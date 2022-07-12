@@ -1,4 +1,5 @@
 package com.example.java_backend.models;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,16 +13,16 @@ public class Shipper {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private Long shipperId;
+	private String shipperId;
 	
 	private Long driverLicense;
 	
 	private Long bankAccountNumber;
 	
 	private String bankName;
-
-	private String frontLicense;
 	
+	private String frontLicense;
+
 	private String behindLicense;
 	
 	private String vaccineCer;
@@ -36,11 +37,11 @@ public class Shipper {
 		this.id = id;
 	}
 
-	public Long getShipperId() {
+	public String getShipperId() {
 		return shipperId;
 	}
 
-	public void setShipperId(Long shipperId) {
+	public void setShipperId(String shipperId) {
 		this.shipperId = shipperId;
 	}
 
@@ -100,7 +101,7 @@ public class Shipper {
 		this.isAccepted = isAccepted;
 	}
 
-	public Shipper(Long shipperId, Long driverLicense, Long bankAccountNumber, String bankName, String frontLicense,
+	public Shipper(String shipperId, Long driverLicense, Long bankAccountNumber, String bankName, String frontLicense,
 			String behindLicense, String vaccineCer) {
 		super();
 		this.shipperId = shipperId;

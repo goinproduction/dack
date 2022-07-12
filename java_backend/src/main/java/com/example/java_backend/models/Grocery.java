@@ -12,7 +12,7 @@ public class Grocery {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
-	private Long sellerId;
+	private String sellerId;
 	
 	private String name;
 	
@@ -42,11 +42,11 @@ public class Grocery {
 		Id = id;
 	}
 
-	public Long getSellerId() {
+	public String getSellerId() {
 		return sellerId;
 	}
 
-	public void setSellerId(Long sellerId) {
+	public void setSellerId(String sellerId) {
 		this.sellerId = sellerId;
 	}
 
@@ -135,7 +135,7 @@ public class Grocery {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Grocery(Long sellerId, String name, String groAddress, String typeOfBusiness, String taxNumber,
+	public Grocery(String sellerId, String name, String groAddress, String typeOfBusiness, String taxNumber,
 			String businessField, Long availbleProduct, Long avgAvailbleProduct, Long avgOrder, String groRoadName,
 			String groApartmentNumber) {
 		super();

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.example.java_backend.models.Shipper;
 
 @Repository
-public interface ShipperRepository extends JpaRepository<Shipper, Long>{
-	Optional<Shipper> findByShipperId(long shipperId);
+public interface ShipperRepository extends JpaRepository<Shipper, String>{
+	Optional<Shipper> findByShipperId(String shipperId);
 }

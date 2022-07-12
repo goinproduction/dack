@@ -23,7 +23,7 @@ namespace asp_backend.Controllers
         {
             try
             {
-                string query = @"SELECT S.shipper_id, U.email, U.full_name, U.phone, U.gender, U.identity_number, U.address, S.driver_license, S.bank_account_number, S.bank_name FROM Users U JOIN Shippers S ON U.id = S.shipper_id";
+                string query = @"SELECT S.shipper_id, U.email, U.full_name, U.phone, U.gender, U.identity_number, U.address, S.driver_license, S.bank_account_number, S.bank_name FROM User U JOIN Shippers S ON U.id = S.shipper_id";
 
                 DataTable table = new DataTable();
                 string sqlDataSource = _configuration.GetConnectionString("App_DB");
@@ -51,14 +51,14 @@ namespace asp_backend.Controllers
         }
 
         [HttpGet ("{id}")]
-        public ActionResult getShipperById(int id)
+        public ActionResult getShipperById(string id)
         {
             try
             {
                 string query = @"SELECT S.shipper_id, U.email, U.full_name, U.area, U.apartment_number, U.road_name,
                                 U.behind_identity, U.date_of_birth, U.front_identity, U.phone, U.gender, U.identity_number, U.address,
                                 S.driver_license, S.bank_account_number, S.bank_name, S.front_license, S.behind_license, S.vaccine_cer 
-                                FROM Users U JOIN Shippers S ON U.id = S.shipper_id WHERE S.shipper_id=@id";
+                                FROM User U JOIN Shippers S ON U.id = S.shipper_id WHERE S.shipper_id=@id";
 
                 DataTable table = new DataTable();
                 string sqlDataSource = _configuration.GetConnectionString("App_DB");
@@ -87,7 +87,7 @@ namespace asp_backend.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateShipperInfomation(Shippers sp, int id)
+        public ActionResult UpdateShipperInfomation(Shippers sp, string id)
         {
             try
             {
@@ -141,7 +141,7 @@ namespace asp_backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteShipperById(int id)
+        public ActionResult DeleteShipperById(string id)
         {
             try
             {
@@ -178,7 +178,7 @@ namespace asp_backend.Controllers
         }
 
         [HttpPut("accepted/{id}")]
-        public ActionResult UpdateIsAccepted(int id)
+        public ActionResult UpdateIsAccepted(string id)
         {
             try
             {

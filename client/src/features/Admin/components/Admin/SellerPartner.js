@@ -1,14 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
 import Table from 'react-bootstrap/Table'
-import { AuthContext } from '../../contexts/AuthContext';
 import Form from 'react-bootstrap/Form';
-import * as Yup from 'yup';
 import Button from 'react-bootstrap/Button';
-import ModalPopup from '../Common/Modal';
 import AlertMessage from '../Common/Alert';
-import search from '../../assets/img/search.png';
 import { PartnerContext } from '../../contexts/PartnerContext';
-
+import { toast } from 'react-toastify';
 export default function SellerPartner() {
 
     const [partnerId, setPartnerId] = useState();
@@ -102,8 +98,7 @@ export default function SellerPartner() {
                 setPartnerById(object);
             }
         } catch (error) {
-            setAlert({ type: 'danger', message: 'Internal Server Error' });
-            setTimeout(() => setAlert(null), 3000);
+            toast.error('Lỗi không xác định, vui lòng thử lại sau!')
         }
     }
 
@@ -114,13 +109,11 @@ export default function SellerPartner() {
         try {
             await deleteGroBySellerId(partnerId);
             await deleteSellerById(partnerId);
-            setAlert({ type: 'success', message: 'Đã hủy bỏ đơn đăng ký bán hàng!' });
-            setTimeout(() => setAlert(null), 3000);
+            toast.success('Đã hủy bỏ đơn đăng ký bán hàng!');
             setNeedRender(!needRender);
 
         } catch (error) {
-            setAlert({ type: 'danger', message: 'Internal Server Error' });
-            setTimeout(() => setAlert(null), 3000);
+            toast.error('Lỗi không xác định, vui lòng thử lại sau!')
         }
     }
     return (

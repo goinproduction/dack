@@ -1,17 +1,16 @@
 import { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+// import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import { AuthContext } from '../../contexts/AuthContext';
 import { PartnerContext } from '../../contexts/PartnerContext';
 import ModalPopup from '../Common/Modal';
 import Header from '../../../../components/common/Header';
 import Footer from '../../../../components/common/Footer';
-
+import { toast } from 'react-toastify';
 export default function ShipperRegister() {
-    const { authState: { userId } } = useContext(AuthContext);
+    const { userId } = JSON.parse(localStorage.getItem('user'));
     const { registerShipper } = useContext(PartnerContext);
     const [show, setShow] = useState(false);
     const [msg, setMsg] = useState('');
@@ -77,9 +76,7 @@ export default function ShipperRegister() {
             data["vaccineCer"] = vaccineCer;
             const registerData = await registerShipper(data);
             if (registerData.status) {
-                setMsg(registerData.message);
-                setShow(true);
-                setPath('/');
+                toast.success(registerData.message);
             }
         } catch (error) {
             console.log(error);

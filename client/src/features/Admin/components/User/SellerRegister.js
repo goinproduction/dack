@@ -3,14 +3,13 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import { AuthContext } from '../../contexts/AuthContext';
 import { PartnerContext } from '../../contexts/PartnerContext';
 import Header from '../../../../components/common/Header';
 import Footer from '../../../../components/common/Footer';
 import { useNavigate } from 'react-router-dom';
 
 export default function SellerRegister() {
-    const { authState: { userId } } = useContext(AuthContext);
+    const { userId } = JSON.parse(localStorage.getItem('user'));
     const { registerSeller } = useContext(PartnerContext);
     const redirect = useNavigate();
 

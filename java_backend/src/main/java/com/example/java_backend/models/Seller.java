@@ -8,7 +8,7 @@ public class Seller {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private Long sellerId;
+	private String sellerId;
 	
 	private String businessCer;
 	
@@ -22,11 +22,11 @@ public class Seller {
 		this.id = id;
 	}
 
-	public Long getSellerId() {
+	public String getSellerId() {
 		return sellerId;
 	}
 
-	public void setSellerId(Long sellerId) {
+	public void setSellerId(String sellerId) {
 		this.sellerId = sellerId;
 	}
 
@@ -46,7 +46,7 @@ public class Seller {
 		this.isAccepted = isAccepted;
 	}
 
-	public Seller(Long sellerId, String businessCer) {
+	public Seller(String sellerId, String businessCer) {
 		super();
 		this.sellerId = sellerId;
 		this.businessCer = businessCer;

@@ -24,7 +24,7 @@ namespace asp_backend.Controllers
             try
             {
                 string query = @"SELECT S.seller_id, U.email, U.full_name, U.phone, U.gender, 
-                                U.identity_number, U.address, G.id, G.name, G.gro_address, U.area FROM Users U JOIN Sellers S ON 
+                                U.identity_number, U.address, G.id, G.name, G.gro_address, U.area FROM User U JOIN Sellers S ON 
                                 U.id = S.seller_id JOIN Groceries G ON G.seller_id = S.seller_id WHERE S.is_accepted=0;";
 
                 DataTable table = new DataTable();
@@ -54,7 +54,7 @@ namespace asp_backend.Controllers
 
 
         [HttpGet("unaccepted/{id}")]
-        public ActionResult getUnacceptedSellerById(int id)
+        public ActionResult getUnacceptedSellerById(string id)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace asp_backend.Controllers
                 U.date_of_birth, U.front_identity, U.full_name, U.gender, U.identity_number, U.phone, U.road_name,
                 G.name, G.gro_address, G.type_of_business, G.tax_number, G.business_field, G.availble_product, G.avg_availble_product,
                 G.avg_order, G.gro_road_name, G.gro_apartment_number
-                FROM Users U JOIN Sellers S ON U.id = S.seller_id JOIN Groceries G ON S.seller_id = G.seller_id WHERE S.is_accepted=0 AND S.seller_id=@id";
+                FROM User U JOIN Sellers S ON U.id = S.seller_id JOIN Groceries G ON S.seller_id = G.seller_id WHERE S.is_accepted=0 AND S.seller_id=@id";
 
                 DataTable table = new DataTable();
                 string sqlDataSource = _configuration.GetConnectionString("App_DB");
@@ -96,7 +96,7 @@ namespace asp_backend.Controllers
             try
             {
                 string query = @"SELECT S.seller_id, U.email, U.full_name, U.phone, U.gender, 
-                                U.identity_number, U.address, G.id, G.name, G.gro_address, U.area FROM Users U JOIN Sellers S ON 
+                                U.identity_number, U.address, G.id, G.name, G.gro_address, U.area FROM User U JOIN Sellers S ON 
                                 U.id = S.seller_id JOIN Groceries G ON G.seller_id = S.seller_id WHERE S.is_accepted=1;";
 
                 DataTable table = new DataTable();
@@ -125,7 +125,7 @@ namespace asp_backend.Controllers
         }
 
         [HttpGet("accepted/{id}")]
-        public ActionResult getAcceptedSellerById(int id)
+        public ActionResult getAcceptedSellerById(string id)
         {
             try
             {
@@ -133,7 +133,7 @@ namespace asp_backend.Controllers
                 U.date_of_birth, U.front_identity, U.full_name, U.gender, U.identity_number, U.phone, U.road_name,
                 G.name, G.gro_address, G.type_of_business, G.tax_number, G.business_field, G.availble_product, G.avg_availble_product,
                 G.avg_order, G.gro_road_name, G.gro_apartment_number
-                FROM Users U JOIN Sellers S ON U.id = S.seller_id JOIN Groceries G ON S.seller_id = G.seller_id WHERE S.is_accepted=1 AND S.seller_id=@id";
+                FROM User U JOIN Sellers S ON U.id = S.seller_id JOIN Groceries G ON S.seller_id = G.seller_id WHERE S.is_accepted=1 AND S.seller_id=@id";
 
                 DataTable table = new DataTable();
                 string sqlDataSource = _configuration.GetConnectionString("App_DB");
@@ -162,7 +162,7 @@ namespace asp_backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
             try
             {
@@ -199,7 +199,7 @@ namespace asp_backend.Controllers
         }
         
         [HttpPost("accepted/{id}")]
-        public ActionResult UpdateIsAccepted(int id)
+        public ActionResult UpdateIsAccepted(string id)
         {
             try
             {
@@ -235,12 +235,12 @@ namespace asp_backend.Controllers
         }
 
         [HttpPost("role/{id}")]
-        public ActionResult UpdateRole(int id)
+        public ActionResult UpdateRole(string id)
         {
             try
             {
                 string query = @"
-                        UPDATE Users SET
+                        UPDATE User SET
                         role = 2
                         where id=@id;       
                 ";

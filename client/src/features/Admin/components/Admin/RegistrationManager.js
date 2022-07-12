@@ -7,6 +7,7 @@ import ModalPopup from '../Common/Modal';
 import AlertMessage from '../Common/Alert';
 import Form from 'react-bootstrap/Form';
 import { PartnerContext } from '../../contexts/PartnerContext';
+import { toast } from 'react-toastify';
 
 export default function RegistrationManager() {
     const { partnerState: { unaccepted }, getUnacceptedSellers,
@@ -103,7 +104,7 @@ export default function RegistrationManager() {
                 setPartnerById(object);
             }
         } catch (error) {
-            setAlert({ type: 'danger', message: 'Internal Server Error' });
+            setAlert({ type: 'danger', message: 'Lỗi không xác định!' });
             setTimeout(() => setAlert(null), 3000);
         }
     }
@@ -115,12 +116,10 @@ export default function RegistrationManager() {
         try {
             await updateUserAccepted(partnerId);
             await updateSellerRoleById(partnerId);
-            setAlert({ type: 'success', message: 'Đơn đăng ký bán hàng đã được chấp nhận!' });
-            setTimeout(() => setAlert(null), 3000);
+            toast.success('Đơn đăng ký bán hàng đã được chấp nhận!');
             setNeedRender(!needRender);
         } catch (error) {
-            setAlert({ type: 'danger', message: 'Internal Server Error' });
-            setTimeout(() => setAlert(null), 3000);
+            toast.error('Lỗi không xác định, vui lòng kiểm tra lại!');
         }
     }
 
@@ -131,11 +130,10 @@ export default function RegistrationManager() {
         try {
             await deleteGroBySellerId(partnerId);
             await deleteSellerById(partnerId);
-            setAlert({ type: 'success', message: 'Đã hủy bỏ đơn đăng ký bán hàng!' });
-            setTimeout(() => setAlert(null), 3000);
+            toast.success('Đã hủy bỏ đơn đăng ký bán hàng!');
             setNeedRender(!needRender);
         } catch (error) {
-            setAlert({ type: 'danger', message: 'Internal Server Error' });
+            setAlert({ type: 'danger', message: 'Lỗi không xác định' });
             setTimeout(() => setAlert(null), 3000);
         }
     }

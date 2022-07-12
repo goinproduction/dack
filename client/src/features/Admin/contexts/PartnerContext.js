@@ -43,6 +43,7 @@ const PartnerContextProvider = ({ children }) => {
     const registerShipper = async (data) => {
         try {
             const response = await axios.post(`${apiUrl}/partner/shipper`, data);
+            console.log(response);
             return response.data;
         } catch (error) {
             if (error.response.data) return error.response.data;

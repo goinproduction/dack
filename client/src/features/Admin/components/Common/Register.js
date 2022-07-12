@@ -8,6 +8,8 @@ import { AuthContext } from '../../contexts/AuthContext';
 import AlertMessage from './Alert';
 import Header from '../../../../components/common/Header';
 import Footer from '../../../../components/common/Footer';
+import { toast } from 'react-toastify';
+
 export default function Register() {
 
     const { registerUser } = useContext(AuthContext);
@@ -82,9 +84,9 @@ export default function Register() {
             data["behindIdentity"] = behindIdentity;
             const registerData = await registerUser(data);
             if (!registerData.status) {
-                setAlert({ type: 'danger', message: registerData.message });
-                setTimeout(() => setAlert(null), 5000);
+                toast.error(registerData.message);
             } else {
+                toast.success('Đăng ký thanh công!');
                 redirect('/login');
             }
         } catch (error) {
