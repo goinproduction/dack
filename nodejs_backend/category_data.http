@@ -1,11 +1,11 @@
-// Thời trang nam
+// Thịt heo
 POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Thời Trang Nam",
-    "image": "https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn",
-    "productLst": ["61ce073c801f291e9874117b", "61ce0782801f291e9874117d"]
+    "title": "Thịt heo các loại",
+    "image": "https://cdn.tgdd.vn/Products/Images/8781/275806/bhx/ba-roi-heo-nhap-khau-tui-500g-202204011308271308_300x300.jpg",
+    "productLst": ["62d1382c0c90223f40b9e6e8", "62d138fc0c90223f40b9e6ea", "62d139030c90223f40b9e6ec", "62d139090c90223f40b9e6ee", "62d139100c90223f40b9e6f0"]
 }
 
 ###
@@ -14,9 +14,9 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Điện Thoại & Phụ Kiện",
-    "image": "https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn",
-    "productLst": ["61ce078c801f291e9874117f", "61ce0795801f291e98741181", "61ce07f5801f291e98741185"]
+    "title": "Mì ăn liền",
+    "image": "https://cdn.tgdd.vn/Products/Images/2565/256692/bhx/mi-ansungtangmyun-nongshim-vi-miso-cay-goi-125g-202205161518388462_300x300.jpg",
+    "productLst": ["62d1394c0c90223f40b9e6fc", "62d139730c90223f40b9e6fe", "62d139780c90223f40b9e700", "62d1397f0c90223f40b9e702", "62d139870c90223f40b9e704"]
 }
 ###
 // Thiết Bị Điện Tử
@@ -24,9 +24,9 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Thiết Bị Điện Tử",
-    "image": "https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn",
-    "productLst": ["61ce0804801f291e98741187", "61ce080c801f291e98741189", "61ce0816801f291e9874118b"]
+    "title": "Giấy vệ sinh",
+    "image": "https://cdn.tgdd.vn/Products/Images/9081/201344/bhx/10-cuon-giay-ve-sinh-premier-deluxe-3-lop-202205141446158141_300x300.jpg",
+    "productLst": ["62d139aa0c90223f40b9e706", "62d139b30c90223f40b9e708", "62d139bb0c90223f40b9e70a", "62d139c10c90223f40b9e70c", "62d139c70c90223f40b9e70e"]
 }
 ###
 // Máy tính & Laptop
@@ -34,9 +34,9 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Máy tính & Laptop",
-    "image": "https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn",
-    "productLst": ["61ce081d801f291e9874118d"]
+    "title": "Rau, củ, trái cây",
+    "image": "https://cdn.tgdd.vn/Products/Images/8785/271572/bhx/ca-rot-da-lat-tui-500g-2-5-cu-202205201605048641_300x300.jpg",
+    "productLst": ["62d1408a0c90223f40b9e73c", "62d140a00c90223f40b9e73e", "62d140a70c90223f40b9e740", "62d140ae0c90223f40b9e742", "62d140b30c90223f40b9e744"]
 }
 ###
 // Máy ảnh & Máy quay
@@ -44,9 +44,9 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Máy ảnh & Máy quay",
-    "image": "https://cf.shopee.vn/file/ec14dd4fc238e676e43be2a911414d4d_tn",
-    "productLst": ["61ce0833801f291e9874118f"]
+    "title": "Chả giò, chả ram",
+    "image": "https://cdn.tgdd.vn/Products/Images/7171/224439/bhx/cha-gio-da-xop-nhan-thit-cau-tre-500g-202205161321587711_300x300.png",
+    "productLst": ["62d13f640c90223f40b9e72e", "62d13fff0c90223f40b9e734", "62d140090c90223f40b9e736", "62d140120c90223f40b9e738", "62d140210c90223f40b9e73a"]
 }
 ###
 // Đồng hồ
@@ -54,9 +54,9 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Đồng Hồ",
-    "image": "https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn",
-    "productLst": ["61ce0839801f291e98741191", "61ce0841801f291e98741193"]
+    "title": "Nước ngọt",
+    "image": "https://cdn.tgdd.vn/Products/Images/2443/282394/bhx/6-lon-nuoc-ngot-fanta-huong-nho-320ml-202206111342201810_300x300.jpg",
+    "productLst": ["62d13eaa0c90223f40b9e724", "62d13eb60c90223f40b9e726", "62d13ec20c90223f40b9e728", "62d13eca0c90223f40b9e72a", "62d13ed00c90223f40b9e72c"]
 }
 ###
 // Giày Dép Nam
@@ -64,9 +64,9 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Giày Dép Nam",
-    "image": "https://cf.shopee.vn/file/74ca517e1fa74dc4d974e5d03c3139de_tn",
-    "productLst": ["61ce0849801f291e98741195"]
+    "title": "Kem các loại",
+    "image": "https://cdn.tgdd.vn/Products/Images/7462/250141/bhx/kem-oc-que-socola-dau-cornetto-cay-66g-202205301431477786_300x300.png",
+    "productLst": ["62d139240c90223f40b9e6f2", "62d1392b0c90223f40b9e6f4", "62d139310c90223f40b9e6f6", "62d139370c90223f40b9e6f8", "62d1393d0c90223f40b9e6fa"]
 }
 ###
 // Thiết bị điện gia dụng
@@ -74,27 +74,18 @@ POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Thiết Bị Điện Gia Dụng",
-    "image": "https://cf.shopee.vn/file/7abfbfee3c4844652b4a8245e473d857_tn",
-    "productLst": ["61ce0857801f291e98741197"]
+    "title": "Nước giặt",
+    "image": "https://cdn.tgdd.vn/Products/Images/2464/210186/bhx/nuoc-giat-omo-matic-huong-comfort-tinh-dau-thom-tui-35-lit-202206140957520746_300x300.jpg",
+    "productLst": ["62d13c660c90223f40b9e71a", "62d13c6b0c90223f40b9e71c", "62d13c720c90223f40b9e71e", "62d13cc70c90223f40b9e720", "62d13cd30c90223f40b9e722"]
 }
-###
-// Thể thao & Du lịch
-POST http://localhost:8080/api/product/createCategory
-Content-Type: application/json
 
-{
-    "title": "Thể Thao & Du Lịch",
-    "image": "https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn",
-    "productLst": ["61ce085c801f291e98741199"]
-}
 ###
 // Ô tô & Xe máy & Xe đạp
 POST http://localhost:8080/api/product/createCategory
 Content-Type: application/json
 
 {
-    "title": "Ô tô & Xe máy & Xe đạp",
-    "image": "https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn",
-    "productLst": ["61ce0864801f291e9874119b"]
+    "title": "Gạo",
+    "image": "https://cdn.tgdd.vn/Products/Images/2513/232804/bhx/gao-tam-thom-home-rice-tui-2kg-202012301306504421.jpg",
+    "productLst": ["62d13b4b0c90223f40b9e710", "62d13c3c0c90223f40b9e712", "62d13c420c90223f40b9e714", "62d13c490c90223f40b9e716", "62d13c4f0c90223f40b9e718"]
 }

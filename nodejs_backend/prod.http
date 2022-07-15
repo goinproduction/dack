@@ -1,0 +1,343 @@
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Thịt ba rọi heo C.P khay 500g",
+    "salePrice": 88000,
+    "regularPrice": 0,
+    "branch": "Meat Master",
+    "description": "Thịt ba rọi heo C.P khay 500g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["500g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/8781/228329/bhx/ba-roi-heo-cp-khay-500g-202205161737201496_300x300.jpg"]
+}  
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Ba rọi heo Meat Master khay 400g",
+    "salePrice": 79500,
+    "regularPrice": 0,
+    "branch": "Meat Master",
+    "description": "Ba rọi heo Meat Master khay 400g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["400g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/8781/258305/bhx/ba-roi-heo-meat-master-khay-400g-202205161744185380_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Ba rọi heo rút sườn C.P khay 500g",
+    "salePrice": 119000,
+    "regularPrice": 0,
+    "branch": "Meat Master",
+    "description": "Ba rọi heo rút sườn C.P khay 500g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["500g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/8781/241252/bhx/ba-roi-heo-rut-suon-cp-khay-500g-1-2-mieng-202205161739060574_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Sườn non heo G khay 300g",
+    "salePrice": 91500,
+    "regularPrice": 0,
+    "branch": "Meat Master",
+    "description": "Sườn non heo G khay 300g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["500g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/8781/241227/bhx/suon-non-heo-g-khay-300g-2-4-mieng-202205161749060704_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Chân giò heo nhập khẩu đông lạnh khay 500g",
+    "salePrice": 32500,
+    "regularPrice": 0,
+    "branch": "Meat Master",
+    "description": "Chân giò heo nhập khẩu đông lạnh khay 500g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["500g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/8781/249012/bhx/chan-gio-heo-nhap-khau-dong-lanh-khay-500g-3-5-mieng-202205161730140264_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+// Kem cac loai
+//
+{
+    "name": "Kem que Topten Socola Wall's 57g",
+    "salePrice": 10000,
+    "regularPrice": 0,
+    "branch": "Merino",
+    "description": "Kem que Topten Socola Wall's 57g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["57g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/7462/250226/bhx/kem-que-topten-socola-walls-57g-202205180827138455_300x300.png"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Kem chuối Merino truyền thống cây 80g",
+    "salePrice": 12500,
+    "regularPrice": 0,
+    "branch": "Merino",
+    "description": "Kem chuối Merino truyền thống cây 80g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["80g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/7462/250175/bhx/kem-chuoi-merino-truyen-thong-cay-80g-202206210850386868_300x300.png"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Kem que trái cây Paddle Pop 39g",
+    "salePrice": 5500,
+    "regularPrice": 0,
+    "branch": "Merino",
+    "description": "Kem que trái cây Paddle Pop 39g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["39g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/7462/250239/bhx/kem-que-trai-cay-paddle-pop-39g-202205180945187553_300x300.png"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Kem socola hạnh nhân vani King's Grand cây 70ml",
+    "salePrice": 15000,
+    "regularPrice": 0,
+    "branch": "Merino",
+    "description": "Kem socola hạnh nhân vani King's Grand cây 70ml",
+    "selection": [{
+        "key": "Thể tích",
+        "value": ["70ml"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/7462/275276/bhx/kem-socola-hanh-nhan-vani-kings-grand-cay-70ml-202205181441086915_300x300.png"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Kem 3 màu Magnolia Gotcha Traffic Light que 35ml",
+    "salePrice": 5500,
+    "regularPrice": 0,
+    "branch": "Merino",
+    "description": "Kem 3 màu Magnolia Gotcha Traffic Light que 35ml",
+    "selection": [{
+        "key": "Thể tích",
+        "value": ["35ml"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/7462/217096/bhx/kem-3-mau-magnolia-gotcha-traffic-light-que-35ml-202205181328224516_300x300.png"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+// Mi an lien
+//
+{
+    "name": "Mì Ansungtangmyun Nongshim miso cay 125g",
+    "salePrice": 18000,
+    "regularPrice": 0,
+    "branch": "Hảo Hảo",
+    "description": "Mì Ansungtangmyun Nongshim miso cay 125g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["125g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/2565/256692/bhx/mi-ansungtangmyun-nongshim-vi-miso-cay-goi-125g-202205161518388462_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Mì cay Nongshim Shin Noodles 114g",
+    "salePrice": 25000,
+    "regularPrice": 0,
+    "branch": "Hảo Hảo",
+    "description": "Mì cay Nongshim Shin Noodles 114g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["114g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/2565/87670/bhx/mi-cay-nongshim-shin-noodles-to-114g-202205141551284869_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Mì cay Nongshim Shincup 68g",
+    "salePrice": 19000,
+    "regularPrice": 0,
+    "branch": "Hảo Hảo",
+    "description": "Mì cay Nongshim Shincup 68g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["68g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/2565/82659/bhx/mi-cay-nongshim-shincup-ly-68g-202205141537363703_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Mì siêu cay Nongshim Shincup 68g",
+    "salePrice": 20500,
+    "regularPrice": 0,
+    "branch": "Hảo Hảo",
+    "description": "Mì siêu cay Nongshim Shincup 68g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["68g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/2565/256651/bhx/mi-sieu-cay-nongshim-shincup-ly-68g-202205161517543267_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "Mì Mama thịt heo bằm 60g",
+    "salePrice": 15100,
+    "regularPrice": 0,
+    "branch": "Hảo Hảo",
+    "description": "Mì Mama thịt heo bằm 60g",
+    "selection": [{
+        "key": "Khối lượng",
+        "value": ["60g"]
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/2565/76369/bhx/mi-mama-huong-thit-heo-bam-ly-60g-202205141154516070_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+// Giay ve sinh
+//
+{
+    "name": "10 cuộn giấy vệ sinh PREMIER Deluxe 3 lớp",
+    "salePrice": 98000,
+    "regularPrice": 0,
+    "branch": "PREMIER",
+    "description": "10 cuộn giấy vệ sinh PREMIER Deluxe 3 lớp",
+    "selection": [{
+        "key": "",
+        "value": []
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/9081/201344/bhx/10-cuon-giay-ve-sinh-premier-deluxe-3-lop-202205141446158141_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "10 cuộn giấy vệ sinh Saigon Eco 2 lớp",
+    "salePrice": 23000,
+    "regularPrice": 0,
+    "branch": "PREMIER",
+    "description": "10 cuộn giấy vệ sinh Saigon Eco 2 lớp",
+    "selection": [{
+        "key": "",
+        "value": []
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/9081/77228/bhx/10-cuon-giay-ve-sinh-saigon-eco-2-lop-202205140953093582_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "12 cuộn giấy vệ sinh Puri 2 lớp",
+    "salePrice": 32900,
+    "regularPrice": 0,
+    "branch": "PREMIER",
+    "description": "12 cuộn giấy vệ sinh Puri 2 lớp",
+    "selection": [{
+        "key": "",
+        "value": []
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/9081/225667/bhx/12-cuon-giay-ve-sinh-puri-2-lop-202205141623091125_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "12 cuộn giấy vệ sinh tre không lõi Lency 2 lớp",
+    "salePrice": 52500,
+    "regularPrice": 0,
+    "branch": "PREMIER",
+    "description": "12 cuộn giấy vệ sinh tre không lõi Lency 2 lớp",
+    "selection": [{
+        "key": "",
+        "value": []
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/9081/232107/bhx/12-cuon-giay-ve-sinh-tre-khong-loi-lency-2-lop-202205141754263331_300x300.jpg"]
+}
+
+###
+POST http://localhost:8080/api/product/createProduct
+Content-Type: application/json
+
+{
+    "name": "10 cuộn giấy vệ sinh Hensley 4 lớp",
+    "salePrice": 142000,
+    "regularPrice": 0,
+    "branch": "PREMIER",
+    "description": "10 cuộn giấy vệ sinh Hensley 4 lớp",
+    "selection": [{
+        "key": "",
+        "value": []
+    }],
+    "image": ["https://cdn.tgdd.vn/Products/Images/9081/194354/bhx/10-cuon-giay-ve-sinh-hensley-4-lop-202205141408489197_300x300.jpg"]
+}

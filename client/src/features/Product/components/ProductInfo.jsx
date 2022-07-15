@@ -37,7 +37,8 @@ function ProductInfo({ product }) {
               color: 'grey.900',
             }}
           >
-            {calcPercentSale(product.regularPrice, product.salePrice)}
+            {/* {calcPercentSale(product.regularPrice, product.salePrice)} */}
+            0%
           </Typography>
         </Stack>
       </Box>

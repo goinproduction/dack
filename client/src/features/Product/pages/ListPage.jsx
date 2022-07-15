@@ -31,7 +31,7 @@ function ListPage() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [sortBy, setSortBy] = React.useState('best_selling');
   const limit = 12;
-  const totalProducts = 16;
+  const totalProducts = 45;
 
   const fetchProducts = async () => {
     try {

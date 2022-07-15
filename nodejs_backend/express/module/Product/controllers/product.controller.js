@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const product_serializer_1 = require("../serializers/product.serializer");
 const product_service_1 = __importDefault(require("../services/product.service"));
 require("dotenv/config");
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_SECRET_ENPOINT;
 class ProductController {
     constructor() {
@@ -19,19 +19,19 @@ class ProductController {
                     return res.status(200).json({
                         success: object.success,
                         message: object.message,
-                        product: (0, product_serializer_1.serializeGetProduct)(object.response)
+                        product: (0, product_serializer_1.serializeGetProduct)(object.response),
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -48,61 +48,13 @@ class ProductController {
                             success: object.success,
                             message: object.message,
                             page: object.page,
-                            productLst: object.response.map((obj) => (0, product_serializer_1.serializeGetProduct)(obj))
+                            productLst: object.response.map((obj) => (0, product_serializer_1.serializeGetProduct)(obj)),
                         });
                     }
                     return res.status(200).json({
                         success: object.success,
                         message: object.message,
-                        productLst: object.response.map((obj) => (0, product_serializer_1.serializeGetProduct)(obj))
-                    });
-                }
-                return res.status(400).json({
-                    success: object.success,
-                    message: object.message
-                });
-            }
-            catch (error) {
-                console.log(error);
-                return res.status(500).json({
-                    success: false,
-                    message: 'Internal Server Error'
-                });
-            }
-        };
-        this.handleGetProductById = async (req, res) => {
-            try {
-                const productId = req.query.productId;
-                const object = await this.ProductService.getProductById(productId);
-                if (object.success) {
-                    return res.status(200).json({
-                        success: object.success,
-                        message: object.message,
-                        product: (0, product_serializer_1.serializeGetProduct)(object.response)
-                    });
-                }
-                return res.status(400).json({
-                    success: object.success,
-                    message: object.message
-                });
-            }
-            catch (error) {
-                console.log(error);
-                return res.status(500).json({
-                    success: false,
-                    message: 'Internal Server Error'
-                });
-            }
-        };
-        this.handleCreateCategory = async (req, res) => {
-            const data = req.body;
-            try {
-                const object = await this.ProductService.createCategory(data.title, data.image, data.productLst);
-                if (object.success) {
-                    return res.status(200).json({
-                        success: object.success,
-                        message: object.message,
-                        category: (0, product_serializer_1.serializeGetCategory)(object.response)
+                        productLst: object.response.map((obj) => (0, product_serializer_1.serializeGetProduct)(obj)),
                     });
                 }
                 return res.status(400).json({
@@ -114,7 +66,55 @@ class ProductController {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
+                });
+            }
+        };
+        this.handleGetProductById = async (req, res) => {
+            try {
+                const productId = req.query.productId;
+                const object = await this.ProductService.getProductById(productId);
+                if (object.success) {
+                    return res.status(200).json({
+                        success: object.success,
+                        message: object.message,
+                        product: (0, product_serializer_1.serializeGetProduct)(object.response),
+                    });
+                }
+                return res.status(400).json({
+                    success: object.success,
+                    message: object.message,
+                });
+            }
+            catch (error) {
+                console.log(error);
+                return res.status(500).json({
+                    success: false,
+                    message: "Internal Server Error",
+                });
+            }
+        };
+        this.handleCreateCategory = async (req, res) => {
+            const data = req.body;
+            try {
+                const object = await this.ProductService.createCategory(data.title, data.image, data.productLst);
+                if (object.success) {
+                    return res.status(200).json({
+                        success: object.success,
+                        message: object.message,
+                        category: (0, product_serializer_1.serializeGetCategory)(object.response),
+                    });
+                }
+                return res.status(400).json({
+                    success: object.success,
+                    message: object.message,
+                });
+            }
+            catch (error) {
+                console.log(error);
+                return res.status(500).json({
+                    success: false,
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -122,6 +122,7 @@ class ProductController {
             try {
                 const _page = parseInt(req.query._page);
                 const _limit = parseInt(req.query._limit);
+                console.log(_page, _limit);
                 const object = await this.ProductService.getAllCategories(_page, _limit);
                 if (object.success) {
                     if (object.page !== null) {
@@ -129,25 +130,25 @@ class ProductController {
                             message: object.message,
                             success: object.success,
                             page: object.page,
-                            categories: object.response
+                            categories: object.response,
                         });
                     }
                     return res.status(200).json({
                         message: object.message,
                         success: object.success,
-                        categories: object.response
+                        categories: object.response,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -156,24 +157,25 @@ class ProductController {
                 const _page = parseInt(req.query._page);
                 const _limit = parseInt(req.query._limit);
                 const categoryId = req.query.categoryId;
+                console.log(_page, _limit);
                 const object = await this.ProductService.getCategoryById(categoryId, _page, _limit);
                 if (object.success) {
                     return res.status(200).json({
                         success: object.success,
                         message: object.message,
-                        category: (0, product_serializer_1.serializeGetCategory)(object.response)
+                        category: (0, product_serializer_1.serializeGetCategory)(object.response),
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -185,19 +187,19 @@ class ProductController {
                     return res.status(200).json({
                         message: object.message,
                         success: object.success,
-                        productLst: object.response
+                        productLst: object.response,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -210,19 +212,19 @@ class ProductController {
                         message: object.message,
                         success: object.success,
                         order: object.response,
-                        sessionid: object.sessionId
+                        sessionid: object.sessionId,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -234,26 +236,26 @@ class ProductController {
                     return res.status(200).json({
                         message: object.message,
                         success: object.success,
-                        orderLst: object.response
+                        orderLst: object.response,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
         this.handleUpdatePaymentStatus = async (req, res) => {
             try {
                 const payload = req.body;
-                const sig = req.headers['stripe-signature'];
+                const sig = req.headers["stripe-signature"];
                 let event;
                 try {
                     event = stripe.webhooks.constructEvent(payload, sig, endpointSecret);
@@ -261,25 +263,25 @@ class ProductController {
                 catch (err) {
                     return res.status(400).json({
                         success: false,
-                        message: 'Bad Request'
+                        message: "Bad Request",
                     });
                 }
-                if (event.type === 'checkout.session.async_payment_succeeded') {
+                if (event.type === "checkout.session.async_payment_succeeded") {
                     const session = event.data.object;
                     return res.status(200).json({
-                        success: true
+                        success: true,
                     });
                 }
                 return res.status(400).json({
                     success: false,
-                    message: 'Bad Request'
+                    message: "Bad Request",
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -293,19 +295,19 @@ class ProductController {
                     return res.status(200).json({
                         message: object.message,
                         success: object.success,
-                        order: object.response
+                        order: object.response,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -317,19 +319,19 @@ class ProductController {
                     return res.status(200).json({
                         message: object.message,
                         success: object.success,
-                        order: object.response
+                        order: object.response,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };
@@ -341,19 +343,19 @@ class ProductController {
                     return res.status(200).json({
                         message: object.message,
                         success: object.success,
-                        productLst: object.response
+                        productLst: object.response,
                     });
                 }
                 return res.status(400).json({
                     success: object.success,
-                    message: object.message
+                    message: object.message,
                 });
             }
             catch (error) {
                 console.log(error);
                 return res.status(500).json({
                     success: false,
-                    message: 'Internal Server Error'
+                    message: "Internal Server Error",
                 });
             }
         };

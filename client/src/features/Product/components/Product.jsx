@@ -58,7 +58,8 @@ function Product({ product }) {
             px: 0.5,
           }}
         >
-          {calcPercentSale(product.regularPrice, product.salePrice)}
+          {/* {calcPercentSale(product.regularPrice, product.salePrice)} */}
+          0%
         </Typography>
       </Stack>
 

@@ -97,7 +97,7 @@ function Filter( {anchorEl, open, handleClose, getFilter}) {
             <FormControlLabel control={<Checkbox/>} label="Khuyến mãi" />
           </FormGroup>
         </Box>
-        <Box>
+        {/* <Box>
           <Typography sx={{pt: '1rem', pl: '1rem', fontWeight: 500}}>
             THƯƠNG HIỆU
           </Typography>
@@ -116,7 +116,7 @@ function Filter( {anchorEl, open, handleClose, getFilter}) {
             <FormControlLabel control={<Checkbox/>} label="Xiaomi" /> 
             <FormControlLabel control={<Checkbox/>} label="Khác" />
           </FormGroup>
-        </Box>
+        </Box> */}
       </Box>
     </Menu>
   );
